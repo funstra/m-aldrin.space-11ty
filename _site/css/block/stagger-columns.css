@@ -1,0 +1,21 @@
+[c\:b="stagger-columns"] {
+  column-count: 3;
+  column-width: 300px;
+  --g: var(--space-3xs);
+  column-gap: var(--g);
+}
+
+[c\:b="stagger-columns"] * {
+  break-inside: avoid;
+}
+
+[c\:b="stagger-columns"] > li {
+  box-shadow: 0 0 12px hsl(0 10% 50% / 0.1);
+  padding: var(--g);
+  margin-bottom: var(--g);
+  background-color: hsl(var(--col-wht));
+}
+[c\:b="stagger-columns"] > li img {
+  height: 100%;
+  width: 100%;
+}
