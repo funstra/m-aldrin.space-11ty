@@ -1,7 +1,7 @@
 [c\:b="stagger-columns"] {
   column-count: 3;
   column-width: 300px;
-  --g: var(--space-3xs);
+  --g: var(--space-2xs);
   column-gap: var(--g);
 }
 

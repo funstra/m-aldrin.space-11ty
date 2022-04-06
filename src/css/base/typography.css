@@ -25,6 +25,9 @@ body {
   transition-timing-function: ease-out;
   transition-delay: 175ms;
 }
+/* .prose:where(h1, h2, h3) {
+  margin-bottom: 0.5em;
+} */
 :where(p, a, li, q, blockquote).black {
   font-variation-settings: "wght" 500;
 }
@@ -44,4 +47,10 @@ h2 {
 h3 {
   font-size: var(--step-2);
   font-variation-settings: "wght" 500;
+}
+
+hr {
+  --flow-gap: 2rem;
+  margin-top: var(--flow-gap, 1rem);
+  margin-bottom: var(--flow-gap, 1rem);
 }
