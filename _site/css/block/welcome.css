@@ -1,0 +1,45 @@
+[c\:b="welcome"] {
+}
+[c\:b="welcome"] > h1 > span:nth-of-type(2) > span:nth-child(1) {
+  /* grid-column: 2;
+  grid-row: 2; */
+  /* grid-area: 2 / 2 / 4 / span 3 ;
+  align-self: center;
+  justify-self: center;
+  margin-top: auto;
+  width: 100%;
+  height: 100%;
+  font-size: 4em; */
+}
+/* [c\:b="welcome"] > h1 > span:nth-of-type(2) > span:nth-child(3) {
+  grid-column: 4;
+  grid-row: 3;
+} */
+
+@keyframes dropIn {
+  to {
+    opacity: 1;
+    transform: var(--t, translateY(0%));
+  }
+}
+
+[c\:b="welcome"] > * {
+  transform: translateY(-5%);
+  opacity: 0;
+
+  animation-name: dropIn;
+  animation-duration: 1s;
+  animation-timing-function: var(--transition-timing-pillow);
+  animation-fill-mode: forwards;
+}
+[c\:b="welcome"] > svg {
+  animation-delay: 0ms;
+  animation-duration: 3s;
+  --t: translateY(0%) rotate(-5deg);
+}
+[c\:b="welcome"] > h1 {
+  animation-delay: 350ms;
+}
+[c\:b="welcome"] > p {
+  animation-delay: 550ms;
+}

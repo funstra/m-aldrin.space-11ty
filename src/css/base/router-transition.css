@@ -1,0 +1,31 @@
+.slideIn,
+.slideOut {
+  animation-duration: var(--page-transition-duration);
+}
+.slideIn {
+  animation-name: slideIn;
+}
+.slideOut {
+  animation-name: slideOut;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}

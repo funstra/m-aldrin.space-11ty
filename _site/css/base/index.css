@@ -1,0 +1,48 @@
+@import "reset.css";
+@import "properties.css";
+@import "typography.css";
+@import "router-transition.css";
+
+html,
+body {
+  height: 100%;
+}
+html {
+  padding: var(--space-3xs);
+  background-color: hsl(var(--col-wht));
+  overflow: hidden;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  padding: 0 var(--space-3xs);
+  /* padding-bottom: 0; */
+
+  overflow-y: hidden;
+  @apply rounded-sm;
+  background-color: hsl(var(--col-secondary));
+}
+
+main {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+button {
+  cursor: pointer;
+  text-align: center;
+
+  padding: 0.125em 1em 0.25em;
+
+  color: currentColor;
+  border-color: currentColor;
+  border-style: solid;
+  background-color: transparent;
+}
+
+ul,
+ol {
+  /* list-style-type: square; */
+}
