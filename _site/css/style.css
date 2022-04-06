@@ -1,9 +1,0 @@
-@import "base";
-
-@import "composition";
-
-@import "block";
-
-@import "utilities";
-
-@tailwind utilities;
