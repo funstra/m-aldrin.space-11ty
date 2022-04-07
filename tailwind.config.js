@@ -240,7 +240,9 @@ module.exports = {
       wider: "0.05ch",
       widest: "0.1ch",
     },
-    lineHeight: {},
+    lineHeight: {
+      0: 0,
+    },
     listStyleType: {
       none: "none",
       disc: "disc",

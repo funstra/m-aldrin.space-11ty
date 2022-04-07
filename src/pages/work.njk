@@ -3,52 +3,17 @@ layout: layouts/base.njk
 ---
 
 <ul class="pb-xs" c:b="stagger-columns">
-  <li>
-    <img loading="lazy" src="/assets/img/voro.jpg" alt="" />
+  {% for asset in assets %}
+    <li>
+    {% if r/jpg|jpeg|png/g.test(asset) %}
+      {% if build.env == 'production' %}
+        {% imgMin '.',asset,'A work of art!','100%' %}
+      {% else %}
+        <img src="{{asset}}" alt="">
+      {% endif %}
+    {% elseif '.mov' in asset %}
+      <video src="{{asset}}" autoplay loop muted></video>
+    {% endif %}
   </li>
-  <li>
-    <video src="/assets/img/sq.mov" autoplay loop muted playisinline></video>
-  </li>
-  <li>
-    <img loading="lazy" src="/assets/img/gob.0.jpg" alt="" />
-  </li>
-  <li>
-    <img loading="lazy" src="/assets/img/lint.jpeg" alt="" />
-  </li>
-  <li>
-    <img loading="lazy" src="/assets/img/pattern.jpg" alt="" />
-  </li>
-  <li>
-    <img loading="lazy" src="/assets/img/split.jpg" alt="" />
-  </li>
-  <li>
-    <video src="/assets/img/value.mov" autoplay loop muted playisinline></video>
-  </li>
-  <li>
-    <img loading="lazy" src="/assets/img/gopi.0.jpg" alt="" />
-  </li>
-  <li>
-    <video src="/assets/img/bla.mov" autoplay loop muted playisinline></video>
-  </li>
-  <li><img loading="lazy" src="/assets/img/elden.png" alt="" /></li>
-  <li style="height: 500px">
-    <img loading="lazy" src="/assets/img/palm.jpeg" alt="" />
-  </li>
-  <li><img loading="lazy" src="/assets/img/style.jpg" alt="" /></li>
-  <li>
-    <video src="/assets/img/te.mov" autoplay loop muted playisinline></video>
-  </li>
-
-  <li><img loading="lazy" src="/assets/img/liminal.jpg" alt="" /></li>
-  <li>
-    <video src="/assets/img/boxo.mov" loop autoplay muted></video>
-  </li>
-  <li><img loading="lazy" src="/assets/img/threes.jpg" alt="" /></li>
-  <li><img loading="lazy" src="/assets/img/boll.png" alt="" /></li>
-  <li>
-    <video src="/assets/img/sobelTest_h264.mov" loop autoplay muted></video>
-  </li>
-  <li>
-    <video src="/assets/img/rangs.mov" loop autoplay muted></video>
-  </li>
+{% endfor %}
 </ul>

@@ -1,10 +1,11 @@
 {
   "scripts": {
     "dev": "npx @11ty/eleventy --serve --incremental",
-    "build": "npx @11ty/eleventy"
+    "build": "NODE_ENV=production npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0-canary.4",
+    "@11ty/eleventy-img": "^2.0.0",
     "@11ty/eleventy-plugin-vite": "^1.0.0-canary.1",
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
