@@ -1,0 +1,4 @@
+[c\:b="card"] {
+  --flow-gap: var(--space-xs);
+  max-width: max-content;
+}
