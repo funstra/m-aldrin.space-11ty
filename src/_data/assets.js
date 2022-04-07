@@ -5,7 +5,7 @@ const dir = resolve(__dirname, "../../", "assets", "img");
 module.exports = function () {
   const files = readdirSync(dir);
   const alsterFiles = files
-    .filter(f => !f.includes(".svg"))
+    .filter(f => !f.includes(".DS_Store"))
     .map(f => `/assets/img/${f}`);
   return alsterFiles;
 };
